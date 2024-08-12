@@ -6,4 +6,4 @@ Directory Structure
 
 Webpage
 
-![image](https://github.com/user-attachments/assets/952f836f-3166-4ed2-b62f-f574c6763a13)
+![image](https://github.com/user-attachments/assets/ce9a0234-4c52-4ab3-85a8-31b8d2f9ccb5)
