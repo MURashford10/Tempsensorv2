@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Display</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function fetchTemperature() {
+            fetch('/latest_temp')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('temp_c').innerText = data.temp_c + '°C';
+                    document.getElementById('temp_f').innerText = data.temp_f + '°F';
+                })
+                .catch(error => console.error('Error fetching temperature:', error));
+        }
+
+        // Fetch temperature every 5 seconds
+        setInterval(fetchTemperature, 5000);
+
+        // Initial fetch to display the temperature immediately
+        fetchTemperature();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Current Temperature</h1>
+        <p>Temperature in Celsius: <span id="temp_c">Loading...</span></p>
+        <p>Temperature in Fahrenheit: <span id="temp_f">Loading...</span></p>
+
+        <h2>Temperature Graphs</h2>
+        <div class="graph-container">
+            <img src="{{ url_for('plot_celsius') }}" alt="Celsius Graph">
+            <img src="{{ url_for('plot_fahrenheit') }}" alt="Fahrenheit Graph">
+        </div>
+    </div>
+</body>
+</html>
