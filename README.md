@@ -3,3 +3,7 @@ This is a project made to read the ambient temperature in a room, record it, and
 Directory Structure
 
 ![image](https://github.com/user-attachments/assets/f62ae797-6afd-4ac3-9619-cf8d4ea6ec95)
+
+Webpage
+
+![image](https://github.com/user-attachments/assets/952f836f-3166-4ed2-b62f-f574c6763a13)
